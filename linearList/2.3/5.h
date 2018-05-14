@@ -1,9 +1,16 @@
 #include <iostream>
 #include "LNode.h"
-usind namespace std;
+using namespace std;
+/*
+ *
+ *
+ * */
 LNode *reverseLink(LNode *head){
-    if(head->next==NULL){
-        return head;
-    }
-
+	LNode *up=head->next;
+	head=head->next;
+	while(head->next!=NULL){
+		head=head->next->next;
+		up->next-next=up;
+		up=up->next
+	}
 }
