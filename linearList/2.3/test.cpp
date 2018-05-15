@@ -1,5 +1,11 @@
 #include <stdio.h>
-#include "6.h"
+#include "12.h"
+void coutLink(LNode *head){
+    while(head->next!=NULL){
+        cout<<" "<<head->next->data<<endl;
+        head=head->next;
+    }
+}
 int main(){
     LNode *head=(LNode *)malloc(sizeof(LNode));
     head->data=100;
@@ -11,10 +17,11 @@ int main(){
         p->next->next=NULL;
         p=p->next;
     }
-    sortLink(head);
-    while(head->next!=NULL){
-        cout<<" "<<head->next->data<<endl;
-        head=head->next;
-    }
+    LNode *a=(LNode *)malloc(sizeof(LNode));
+    LNode *b=(LNode *)malloc(sizeof(LNode));
+    head->next->next->data=6;
+    deleteSame(head);
+    coutLink(head);
+    coutLink(b);
     return 0;
 }
