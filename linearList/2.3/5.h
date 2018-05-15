@@ -6,11 +6,15 @@ using namespace std;
  *
  * */
 LNode *reverseLink(LNode *head){
-	LNode *up=head->next;
+	LNode *up=head;
 	head=head->next;
-	while(head->next!=NULL){
-		head=head->next->next;
-		up->next-next=up;
-		up=up->next
-	}
+    up->next=NULL;
+    LNode *t=head;
+	while(head!=NULL){
+        head=head->next;
+        t->next=up;
+        up=t;
+        t=head;
+    }
+    return up;
 }
