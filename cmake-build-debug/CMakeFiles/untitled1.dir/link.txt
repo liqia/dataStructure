@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/untitled1.dir/linearList/2.3/test.cpp.o  -o untitled1 
