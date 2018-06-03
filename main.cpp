@@ -1,4 +1,4 @@
-#include "tree/levelOrder.h"
+#include "tree/binary_tree_depth.h"
 #include <iostream>
 using namespace std;
 
@@ -46,6 +46,6 @@ BitTree productTree(){
 
 int main(){
     BitTree p=productTree();
-    levelOrder(&p);
+    cout <<BinaryTreeDepth(p)<<endl;
     return 0;
 }
