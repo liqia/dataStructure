@@ -1,5 +1,5 @@
+#include "tree/levelOrder.h"
 #include <iostream>
-#include "LRN.h"
 using namespace std;
 
 /*
@@ -46,6 +46,6 @@ BitTree productTree(){
 
 int main(){
     BitTree p=productTree();
-    postOrder(&p);
+    levelOrder(&p);
     return 0;
 }
