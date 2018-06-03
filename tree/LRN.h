@@ -1,5 +1,5 @@
 #include <iostream>
-#include "bitTree.h"
+//#include "bitTree.h"
 #include "stack.h"
 using namespace std;
 void postOrder (BitTree *T){
