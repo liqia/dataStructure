@@ -1,4 +1,6 @@
-#include "tree/binary_tree_depth.h"
+#include "tree/preOrder_inOrder_creat_tree.h"
+#include "tree/LRN.h"
+#include "tree/delete_x.h"
 #include <iostream>
 using namespace std;
 
@@ -45,7 +47,11 @@ BitTree productTree(){
 
 
 int main(){
-    BitTree p=productTree();
-    cout <<BinaryTreeDepth(p)<<endl;
+//    BitTree p=productTree();
+    int pre[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int in[]={2,3,1,5,4,7,8,6,9};
+    BitTree *p=CreateTree(pre,in,9);
+    DeleteX(&p,3);
+    postOrder(p);
     return 0;
 }
