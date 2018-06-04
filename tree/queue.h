@@ -8,7 +8,6 @@
 #endif //DATASTRUCT_QUEUE_H
 
 #include <iostream>
-#include "bitTree.h"
 
 using namespace std;
 
