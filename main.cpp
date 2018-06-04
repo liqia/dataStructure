@@ -1,6 +1,6 @@
 #include "tree/preOrder_inOrder_creat_tree.h"
 #include "tree/fulltree_preTopost.h"
-#include "tree/similar_binary_tree.h"
+#include "tree/WPL.h"
 #include <iostream>
 using namespace std;
 
@@ -51,6 +51,6 @@ int main(){
     int pre[] = {1,2,4,5,3,6,7};
     int in[]={4,2,5,1,6,3,7};
     BitTree *p=CreateTree(pre,in,7);
-    cout<<isSimilar(p,&a)<<endl;
+    cout<<WPL(&a)<<endl;
     return 0;
 }
