@@ -38,6 +38,6 @@ bool pop(Astack *s, BitTree *x) {
 bool getTop(Astack s, BitTree *x) {
     if (s.top == -1)
         return false;
-    *x = s.data[s.top];
+    *x = (s.data[s.top]);
     return true;
 }
