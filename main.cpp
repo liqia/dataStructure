@@ -1,6 +1,6 @@
 #include "tree/preOrder_inOrder_creat_tree.h"
 #include "tree/fulltree_preTopost.h"
-#include "tree/delete_x.h"
+#include "tree/leaf_node_to_linkList.h"
 #include <iostream>
 using namespace std;
 
@@ -51,6 +51,14 @@ int main(){
     int pre[] = {1,2,4,5,3,6,7};
     int in[]={4,2,5,1,6,3,7};
     BitTree *p=CreateTree(pre,in,7);
-    PreToPost(p,pre,7);
+    BitTree *head=(BitTree*)malloc(sizeof(BitTree));
+    head->value=-1;
+    head->RbitTree=NULL;
+    head->LbitTree=NULL;
+    LeafNodeToLinkList(head,p);
+    while(head){
+        cout<<head->value<<endl;
+        head=head->RbitTree;
+    }
     return 0;
 }
