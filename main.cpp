@@ -1,5 +1,5 @@
 #include "tree/preOrder_inOrder_creat_tree.h"
-#include "tree/tree_width.h"
+#include "tree/fulltree_preTopost.h"
 #include "tree/delete_x.h"
 #include <iostream>
 using namespace std;
@@ -48,9 +48,9 @@ BitTree productTree(){
 
 int main(){
     BitTree a=productTree();
-    int pre[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int in[]={2,3,1,5,4,7,8,6,9};
-    BitTree *p=CreateTree(pre,in,9);
-    cout<<TreeWidth(a)<<endl;
+    int pre[] = {1,2,4,5,3,6,7};
+    int in[]={4,2,5,1,6,3,7};
+    BitTree *p=CreateTree(pre,in,7);
+    PreToPost(p,pre,7);
     return 0;
 }
