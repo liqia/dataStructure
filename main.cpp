@@ -1,6 +1,6 @@
 #include "tree/preOrder_inOrder_creat_tree.h"
 #include "tree/fulltree_preTopost.h"
-#include "tree/LRN2.h"
+#include "tree/usual_tree_deepth.h"
 #include <iostream>
 using namespace std;
 
@@ -8,7 +8,7 @@ using namespace std;
        1
       2 3
     x 4 x 5
-x x x 6 x x x x
+x x 6 x x x x x
  * */
 BitTree productTree(){
     BitTree T;
@@ -51,6 +51,6 @@ int main(){
     int pre[] = {1,2,4,5,3,6,7};
     int in[]={4,2,5,1,6,3,7};
     BitTree *p=CreateTree(pre,in,7);
-    LRN(&a);
+    cout<<TreeDeepth(&a);
     return 0;
 }
