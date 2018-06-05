@@ -1,3 +1,6 @@
+#ifndef BINARY_TREE
+#define BINARY_TREE
+
 #include <iostream>
 using namespace std;
 struct BitTree{
@@ -5,3 +8,5 @@ struct BitTree{
     BitTree *LbitTree;
     BitTree *RbitTree;
 };
+
+#endif
