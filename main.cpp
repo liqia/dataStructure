@@ -1,4 +1,5 @@
 #include "tree/preOrder_inOrder_creat_tree.h"
+#include "MOF.h"
 #include "tree/fulltree_preTopost.h"
 #include "tree/usual_tree_deepth.h"
 #include "tree/detemine_BST.h"
@@ -52,6 +53,7 @@ int main(){
     int pre[] = {1,2,4,5,3,6,7};
     int in[]={4,2,5,1,6,3,7};
     BitTree *p=CreateTree(pre,in,7);
-    cout<<IsBST(&a)<<endl;
+    cout<<MF(7,120)<<endl;
+    cout<<Encode(143,7,25);
     return 0;
 }
