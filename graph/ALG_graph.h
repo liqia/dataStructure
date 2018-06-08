@@ -33,39 +33,43 @@ void  CreatGraph(Graph &graph){
 
     //1->2->3
     graph.vNodes[0].data=1;
-    ArcNode arcNode12,arcNode13;
-    arcNode12.vertex=2;
-    arcNode12.next=&arcNode13;
-    arcNode13.vertex=3;
-    arcNode13.next=NULL;
-    graph.vNodes[0].first=&arcNode12;
+    ArcNode * arcNode12=(ArcNode*)malloc(sizeof(ArcNode));
+    ArcNode * arcNode13=(ArcNode*)malloc(sizeof(ArcNode));
+    arcNode12->vertex=2;
+    arcNode12->next=arcNode13;
+    arcNode13->vertex=3;
+    arcNode13->next=NULL;
+    graph.vNodes[0].first=arcNode12;
 
     //2->3->4->1
     graph.vNodes[1].data=2;
-    ArcNode arcNode23,arcNode24,arcNode21;
-    arcNode23.vertex=3;
-    arcNode23.next=&arcNode24;
-    arcNode24.vertex=4;
-    arcNode24.next=&arcNode21;
-    arcNode21.vertex=1;
-    arcNode21.next=NULL;
-    graph.vNodes[1].first=&arcNode23;
+    ArcNode * arcNode23=(ArcNode*)malloc(sizeof(ArcNode));
+    ArcNode * arcNode24=(ArcNode*)malloc(sizeof(ArcNode));
+    ArcNode * arcNode21=(ArcNode*)malloc(sizeof(ArcNode));
+    arcNode23->vertex=3;
+    arcNode23->next=arcNode24;
+    arcNode24->vertex=4;
+    arcNode24->next=arcNode21;
+    arcNode21->vertex=1;
+    arcNode21->next=NULL;
+    graph.vNodes[1].first=arcNode23;
 
     //3->1->2
     graph.vNodes[2].data=3;
-    ArcNode arcNode31,arcNode32;
-    arcNode31.vertex=1;
-    arcNode32.vertex=2;
-    arcNode31.next=&arcNode32;
-    arcNode32.next=NULL;
-    graph.vNodes[2].first=&arcNode31;
+    ArcNode * arcNode31=(ArcNode*)malloc(sizeof(ArcNode));
+    ArcNode * arcNode32=(ArcNode*)malloc(sizeof(ArcNode));
+    arcNode31->vertex=1;
+    arcNode32->vertex=2;
+    arcNode31->next=arcNode32;
+    arcNode32->next=NULL;
+    graph.vNodes[2].first=arcNode31;
 
     //4->2
     graph.vNodes[3].data=4;
-    ArcNode arcNode42;
-    arcNode42.vertex=2;
-    arcNode42.next=NULL;
-    graph.vNodes[2].first=&arcNode42;
+    ArcNode * arcNode42=(ArcNode*)malloc(sizeof(ArcNode));
+    arcNode42->vertex=2;
+    arcNode42->next=NULL;
+    graph.vNodes[2].first=arcNode42;
 
 }
 
