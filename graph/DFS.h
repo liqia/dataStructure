@@ -29,6 +29,7 @@ void DFS(Graph &graph,int firstVertex){
             DFS_Recursion(graph,j,visited);
         }
     }
+    free(visited);
 }
 
 #endif //DATASTRUCT_DFS_H

@@ -29,6 +29,7 @@ void BFS(Graph &graph,int firstVertex){
             }
         }
     }
+    free(visited);
 }
 
 #endif //DATASTRUCT_BFS_H
