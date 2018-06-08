@@ -33,13 +33,12 @@ void  CreatGraph(Graph &graph){
 
     //1->2->3
     graph.vNodes[0].data=1;
-    ArcNode * arcNode12=(ArcNode*)malloc(sizeof(ArcNode));
-    ArcNode * arcNode13=(ArcNode*)malloc(sizeof(ArcNode));
-    arcNode12->vertex=2;
-    arcNode12->next=arcNode13;
-    arcNode13->vertex=3;
-    arcNode13->next=NULL;
-    graph.vNodes[0].first=arcNode12;
+    ArcNode arcNode12,arcNode13;
+    arcNode12.vertex=2;
+    arcNode12.next=&arcNode13;
+    arcNode13.vertex=3;
+    arcNode13.next=NULL;
+    graph.vNodes[0].first=&arcNode12;
 
     //2->3->4->1
     graph.vNodes[1].data=2;
