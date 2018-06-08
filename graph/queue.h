@@ -22,14 +22,15 @@ void initQueue(Queue &queue){
 }
 
 bool EnQueue(Queue &queue, int value){
-    Node node;
-    node.next=NULL;
-    node.value=value;
+    Node *node=(Node *)malloc(sizeof(Node));
+    node->next=NULL;
+    node->value=value;
     if (queue.front == NULL) {
-       queue.front=&node;
-       queue.rear=&node;
+       queue.front=node;
+       queue.rear=node;
     } else{
-        queue.rear->next=&node;
+        queue.rear->next=node;
+        queue.rear=queue.rear->next;
     }
     return true;
 }

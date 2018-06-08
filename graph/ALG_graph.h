@@ -69,7 +69,7 @@ void  CreatGraph(Graph &graph){
     ArcNode * arcNode42=(ArcNode*)malloc(sizeof(ArcNode));
     arcNode42->vertex=2;
     arcNode42->next=NULL;
-    graph.vNodes[2].first=arcNode42;
+    graph.vNodes[3].first=arcNode42;
 
 }
 

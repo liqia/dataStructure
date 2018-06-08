@@ -47,13 +47,13 @@ BitTree productTree(){
     return T;
 }
 
-
-int main(){
-    BitTree a=productTree();
-    int pre[] = {1,2,4,5,3,6,7};
-    int in[]={4,2,5,1,6,3,7};
-    BitTree *p=CreateTree(pre,in,7);
-    cout<<MF(7,120)<<endl;
-    cout<<Encode(143,7,25);
-    return 0;
-}
+//
+//int main(){
+//    BitTree a=productTree();
+//    int pre[] = {1,2,4,5,3,6,7};
+//    int in[]={4,2,5,1,6,3,7};
+//    BitTree *p=CreateTree(pre,in,7);
+//    cout<<MF(7,120)<<endl;
+//    cout<<Encode(143,7,25);
+//    return 0;
+//}
